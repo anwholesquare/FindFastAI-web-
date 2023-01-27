@@ -1,7 +1,7 @@
 import React from 'react';
-import img from '../../1.png';
-import img1 from '../../pngegg.png';
-import bghome from '../../bg_ai.png';
+import img from '../../images/1.png';
+import img1 from '../../images/pngegg.png';
+import bghome from '../../images/bg_ai.png';
 
 const Home = () => {
     return (
@@ -11,7 +11,7 @@ const Home = () => {
                     <div>
                         <img src={img} className="max-w-sm rounded-lg pt-24" />
                         <p className='font-bold text-center py-5'>Download the app now!</p>
-                        <img src={img1} className="max-w-sm w-40 mx-auto pb-10" />
+                        <img src={img1} className="max-w-sm w-40 mx-auto mb-36" />
                     </div>
                     <div>
                         <h1 className="text-5xl font-bold">Discover to unleash </h1>
