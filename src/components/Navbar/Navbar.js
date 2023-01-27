@@ -5,7 +5,7 @@ import Usefirebase from '../../hooks/Usefirebase';
 
 const Navbar = () => {
 
-    const {user}=Usefirebase();
+    const {user,handleSignOut}=Usefirebase();
 
 
     return (
@@ -15,11 +15,13 @@ const Navbar = () => {
             </div>
             <div className="navbar-end nav">
                 <ul className="menu menu-horizontal px-1 lg:flex font-semibold text-lg hidden lg:block">
+                    <li><p className='text-red'>{user?.displayName && user?.displayName}</p></li>
                     <li><Link to="/home">Home</Link></li>
                     <li><Link to='/about'>About us</Link></li>
+                    {user?.uid && <li><Link to='/search'>Search</Link></li>}
                     {
-                        user.uid ?
-                        <li><p className='btn btn-ghost'> Sign out</p></li>
+                        user?.uid ?
+                        <li><Link onClick={handleSignOut} to="/"> Sign out</Link></li>
                         :
                         <li><Link to="/signin"> Sign in</Link></li>
                     }
