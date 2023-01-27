@@ -25,7 +25,7 @@ const SearchResults = () => {
                     <SearchResult
                     key={sresult.id}
                     idx = {sresult.id}
-                    name={sresult.name} day={sresult.day}
+                    name={sresult.subtopic_name} day={sresult.index_no}
                     description={sresult.description} >
                 </SearchResult>
                     )

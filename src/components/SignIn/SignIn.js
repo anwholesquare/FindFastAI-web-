@@ -1,10 +1,12 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import Usefirebase from '../../hooks/Usefirebase';
 import gl from '../../images/google-logo-9824.png';
 import login from "../../images/user-interface (2).png";
 import './Signin.css'
 
 const SignIn = () => {
+    
     const {signInWithGoogle} =Usefirebase();
     return (
         <div className="w-full p-6 bg-white rounded-md shadow-2xl lg:max-w-xl text-black mt-60 mx-auto my-auto">

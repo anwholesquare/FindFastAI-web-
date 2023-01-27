@@ -9,40 +9,40 @@
     },
     {
         "id":"2",
-        "day":"2",
+        "index_no":"2",
         "video_id":"654",
-        "name":"integral"
+        "subtopic_name":"integral"
     }
 ,
 {
     "id":"3",
-    "day":"3",
+    "index_no":"3",
     "video_id":"654",
-    "name":"defirenetiation"
+    "subtopic_name":"defirenetiation"
 }
 ,{
     "id":"4",
-    "day":"4",
+    "index_no":"4",
     "video_id":"654",
-    "name":"math imp"
+    "subtopic_name":"math imp"
 },
 {
     "id":"5",
-    "day":"5",
+    "index_no":"5",
     "video_id":"654",
-    "name":"math impo"
+    "subtopic_name":"math impo"
 },
 {
     "id":"6",
-    "day":"6",
+    "index_no":"6",
     "video_id":"654",
-    "name":"math impo"
+    "subtopic_name":"math impo"
 }
 ,{
     "id":"7",
-    "day":"7",
+    "index_no":"7",
     "video_id":"654",
-    "name":"math impo"
+    "subtopic_name":"math impo"
 }
 
 

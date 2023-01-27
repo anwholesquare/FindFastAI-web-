@@ -35,7 +35,13 @@ const Navbar = () => {
                     <ul tabIndex={0} className="nav-end menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                         <li><a as={Link} to="/home">Home</a></li>
                         <li><a as={Link} to="/about">About</a></li>
-                        <li><a as={Link} to="/signin">Sign in</a></li>
+                        {user?.uid && <li><Link to='/search'>Search</Link></li>}
+                        {
+                        user?.uid ?
+                        <li><Link onClick={handleSignOut} to="/"> Sign out</Link></li>
+                        :
+                        <li><Link to="/signin"> Sign in</Link></li>
+                    }
                     </ul>
 
                 </div>

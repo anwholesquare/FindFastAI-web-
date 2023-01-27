@@ -4,3 +4,10 @@
     align-items: center;
     flex-wrap: wrap;
   }
+
+.off {display: none;}
+.on {display: block;}
+.tag {
+  border-radius: 20px !important;
+  border-color: none !important;
+}

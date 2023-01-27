@@ -4,7 +4,7 @@ import './About.css'
 const About = () => {
     return (
         <div>
-            <div className="mysection mb-5">
+            <div className="mysection mt-20">
                 <figure><ReactPlayer url="https://youtu.be/Zv4K_Vh_uKs" /></figure>
             </div>
             <p className="mysection mt-10 font-semibold text-black ">
