@@ -1,20 +1,31 @@
 import React from 'react';
 import ReactPlayer from 'react-player';
 import { useParams } from 'react-router-dom';
+import { useState, useEffect } from "react";
 
 const SearchDetails = () => {
-    const {searchId}=useParams();
+    const {subtopic}=useParams();
+    
+
+    const [videoURL, setvideoURL] = useState("");
+    const [desc, setDesc] = useState("");
+
+
+    useEffect(() => {
+        fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=${subtopic}&type=video&key=AIzaSyBvdQNIflKQd3VAFEMvZtr0FRTrFnt3y3w `)
+        .then(res=> res.json())
+        .then (data => { setvideoURL("https://www.youtube.com/watch?v=" + data["items"][0]["id"]["videoId"]); setDesc(data["items"][0]["snippet"]["description"]); } )
+    });
     return (
         <div>
-            <h1 className='tet-2xl font-bold text-black text-center my-20'>Video no{searchId}</h1>
+            <h1 className='text-2xl font-bold text-black text-center my-20'>The Topic is: {subtopic}</h1>
             <div>
             <div className="mysection mb-5">
-                <figure><ReactPlayer url="https://youtu.be/Zv4K_Vh_uKs" /></figure>
+                <figure><ReactPlayer url={videoURL} /></figure>
             </div>
             <p className="mysection mt-10 font-semibold text-black px-60 mb-20">
-                An advanced algorithm to find the most relevant sequential resources crawling the web according to your searched topic and compiling them into a personalized playlist
-            that is constantly learning and adapting to your preferences.
-            </p>
+                {desc}
+            </p>    
         </div>
         </div>
     );

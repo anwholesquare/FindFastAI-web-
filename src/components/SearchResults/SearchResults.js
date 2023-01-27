@@ -11,7 +11,7 @@ const SearchResults = () => {
             fetch(`https://khandokeranan.com/projects/findfastai/gpt3/test.php?q=${topicName}`)
             .then(res=>res.json())
             .then(data=>setSearchlist(data["data"]));
-    },[])
+    },[]);
 
 
     return (
@@ -22,7 +22,7 @@ const SearchResults = () => {
             {
                 searchlist.map(sresult=>
                     <SearchResult
-                    key={sresult} name = {sresult}
+                    key={sresult} name ={sresult}
                     ></SearchResult>
                     )
             };

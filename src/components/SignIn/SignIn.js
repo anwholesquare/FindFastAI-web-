@@ -8,6 +8,7 @@ import './Signin.css'
 const SignIn = () => {
     
     const {signInWithGoogle} =Usefirebase();
+    
     return (
         <div className="w-full p-6 bg-white rounded-md shadow-2xl lg:max-w-xl text-black mt-60 mx-auto my-auto">
             <h1 className="text-3xl font-semibold text-center uppercase" style={{color:"#4D4CFF"}}>Sign in</h1>

@@ -11,6 +11,8 @@ const Search = () => {
     const navigate = useNavigate();
     let finalTopic = "";
 
+
+
     const searchClick = async (usersearch) => {
         try {
             console.log("Hello");
@@ -68,8 +70,7 @@ const Search = () => {
             <div className={abc ? "btn-group mt-10 off" : "btn-group mt-10 on"}>
                 <div className="modal" id="my-modal-2">
                     <div className="modal-box">
-                        <h3 className="font-bold text-lg">Congratulations random Internet user!</h3>
-                        <p className="py-4">You've been selected for a chance to get one year of subscription to use Wikipedia for free!</p>
+                        <h3 className="font-bold text-lg">Want to enroll into the topic?</h3>
                         <div className="modal-action">
                             <a href="#" onClick={()=>navigateToNext(finalTopic)} className="btn">Yes</a>
                             <a href="#" onClick={()=>navigateToResult()} className="btn">No</a>

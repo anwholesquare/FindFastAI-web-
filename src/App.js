@@ -22,7 +22,7 @@ function App() {
         <Route path= "/about" element={<About/>}/>
         <Route path= "/search" element={<Search/>}/>
         <Route path= "/search/:topicName" element={<SearchResults/>}/>
-        <Route path= "/searchdetail/:searchId" element={<SearchDetails/>}/>
+        <Route path= "/searchdetail/:subtopic" element={<SearchDetails/>}/>
         <Route path="/myprofile" element={<MyProfile/>}/>
 
       </Routes>
