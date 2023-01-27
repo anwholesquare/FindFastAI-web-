@@ -5,7 +5,8 @@ import Navbar from "./components/Navbar/Navbar";
 import SignIn from "./components/SignIn/SignIn";
 import 'bootstrap/dist/js/bootstrap.min.js';
 import Search from "./components/Search/Search";
-import SearchResult from "./components/SearchResults/SearchResult";
+import SearchResults from "./components/SearchResults/SearchResults";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -17,11 +18,11 @@ function App() {
         <Route path= "/signin" element={<SignIn/>}/>
         <Route path= "/about" element={<About/>}/>
         <Route path= "/search" element={<Search/>}/>
-        <Route path= "/searchresult" element={<SearchResult/>}/>
+        <Route path= "/searchresults" element={<SearchResults/>}/>
         
       </Routes>
       {/* <SignIn/> */}
-     
+     <Footer/>
     </div>
   );
 }

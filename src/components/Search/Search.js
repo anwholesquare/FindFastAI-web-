@@ -1,9 +1,16 @@
 import React from 'react';
+import { useEffect, useState } from 'react';
 import './Search.css';
 import img from '../../images/search up.png'
 import './Search.css'
 const Search = () => {
+    const [searchlist,setSearchlist]=useState([]);
 
+    useEffect( ()=>{
+            fetch('searchs.json')
+            .then(res=>res.json())
+            .then(data=>setSearchlist(data));
+    },[])
 
     return (
         <div className='text-black font-bold text-center ul'>
