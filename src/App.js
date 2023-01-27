@@ -9,6 +9,7 @@ import SearchResults from "./components/SearchResults/SearchResults";
 import Footer from "./components/Footer/Footer";
 import SearchDetails from "./components/SearchDetails/SearchDetails";
 import MyProfile from "./components/MyProfile/MyProfile";
+import './App.css';
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
         <Route path= "/signin" element={<SignIn/>}/>
         <Route path= "/about" element={<About/>}/>
         <Route path= "/search" element={<Search/>}/>
-        <Route path= "/searchresults/" element={<SearchResults/>}/>
+        <Route path= "/search/:topicName" element={<SearchResults/>}/>
         <Route path= "/searchdetail/:searchId" element={<SearchDetails/>}/>
         <Route path="/myprofile" element={<MyProfile/>}/>
 

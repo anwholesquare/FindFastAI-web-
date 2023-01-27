@@ -7,27 +7,51 @@ import { Navigate, useNavigate } from 'react-router-dom';
 const Search = () => {
     const [topic, setTopic] = useState([]);
     const [abc, setabc] = useState(true);
-    const [usersearch, setusersearch] = useState('');
     const searchRef = useRef('');
     const navigate = useNavigate();
-    useEffect( ()=>{
-        fetch(`https://khandokeranan.com/projects/findfastai/gpt3/suggestedtopic.php?q=${usersearch}`)
-        .then(res=>res.json())
-        .then(data=>setTopic(JSON.parse(data)));
-},[])
-    const subtopicshow = () => {
-        setusersearch(searchRef.current.value);
-        setabc(false);
+    let finalTopic = "";
 
+    const searchClick = async (usersearch) => {
+        try {
+            console.log("Hello");
+            const response = await fetch(`https://khandokeranan.com/projects/findfastai/gpt3/suggestedtopic.php?q=${usersearch}`, {
+                method: 'GET',
+                headers: {
+                    Accept: 'application/json',
+                },
+            });
+
+            if (!response.ok) {
+                throw new Error(`Error! status: ${response.status}`);
+            }
+
+            const result = await response.json();
+            setTopic(result["data"]);
+            console.log(result);
+            setabc(false);
+        } catch (err) {
+        } finally {
+        }
+    }
+    const subtopicshow = () => {
+        ;
+        searchClick(searchRef.current.value);
         // navigate(`/searchresults/${usersearch}`);
         //navigate('/searchresults');
     }
     const navigateToResult = () => {
-        const usersearch = searchRef.current.value;
-        console.log(usersearch);
+        
+        navigate('/search');
+    }
 
-        //navigate(`/searchresults/${usersearch}`);
-        navigate('/searchresults');
+    const navigateToNext = (topic) => {
+        
+        navigate(`/search/${topic}`);
+    }
+
+    const changer = (topic) => {
+        
+        finalTopic = topic;
     }
 
     return (
@@ -38,13 +62,26 @@ const Search = () => {
 
             </div>
             <button onClick={subtopicshow} className="btn btn-primary w-20">Search</button>
+
+
+
             <div className={abc ? "btn-group mt-10 off" : "btn-group mt-10 on"}>
-                {
-                    topic.map(subtopic=>
-                        <input key={subtopic} type="radio" onClick={navigateToResult} name="options" data-title={subtopic} className="btn mr-5 tag" />
+                <div className="modal" id="my-modal-2">
+                    <div className="modal-box">
+                        <h3 className="font-bold text-lg">Congratulations random Internet user!</h3>
+                        <p className="py-4">You've been selected for a chance to get one year of subscription to use Wikipedia for free!</p>
+                        <div className="modal-action">
+                            <a href="#" onClick={()=>navigateToNext(finalTopic)} className="btn">Yes</a>
+                            <a href="#" onClick={()=>navigateToResult()} className="btn">No</a>
+                        </div>
+                    </div>
+                </div>
+                {   
+                    topic.map(subtopic =>
+                        <a type="radio" name="options" key={subtopic} href="#my-modal-2" onClick={changer(subtopic)} className="btn mr-5 tag">{subtopic}</a>
                     )
                 }
-                
+
             </div>
         </div>
     );
