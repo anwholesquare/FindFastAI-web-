@@ -8,7 +8,8 @@ module.exports = {
     styled: true, 
     themes: [ 
       { dark: { ...require("daisyui/src/colors/themes")["[data-theme=dark]"], 
-      "base-100": "#FFFF"
+      "base-100": "#FFFF",
+      "custom_color-1":"#4D4CFF"
       }, 
     }, 
   ], 
