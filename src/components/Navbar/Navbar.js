@@ -12,7 +12,7 @@ const Navbar = () => {
                     <li><a href='/about'>About us</a></li>
                     <li><Link to="/signin"> Sign in</Link></li>
                 </ul>
-                <a className="btn lg:mr-36 lg:ml-14 text-white">Download</a>
+                {/* <a className="btn lg:mr-36 lg:ml-14 text-white">Download</a> */}
                 <div className="dropdown dropdown-end">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">

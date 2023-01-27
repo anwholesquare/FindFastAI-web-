@@ -20,6 +20,7 @@ const Home = () => {
                             searched topic and compiling them into a personalized playlist that is constantly learning and adapting to your preferences.
                         </p>
                         {/* <img src={img1} className="max-w-sm w-40 pb-10" /> */}
+                        <a className="btn text-white my-7">Download</a> 
                     </div>
                 </div>
             </div>
