@@ -1,46 +1,48 @@
 [
     {
+        
         "id":"1",
-        "day":"1",
-        "name":"calculus",
-        "description":"this is a good video"
+        "index_no":"1",
+        "video_id":"654",
+        "subtopic_name":"calculus"
+        
     },
     {
         "id":"2",
         "day":"2",
-        "name":"integral",
-        "description":"this is a good video"
+        "video_id":"654",
+        "name":"integral"
     }
 ,
 {
     "id":"3",
     "day":"3",
-    "name":"defirenetiation",
-    "description":"this is a good video"
+    "video_id":"654",
+    "name":"defirenetiation"
 }
 ,{
     "id":"4",
     "day":"4",
-    "name":"math imp",
-    "description":"this is a good video"
+    "video_id":"654",
+    "name":"math imp"
 },
 {
     "id":"5",
     "day":"5",
-    "name":"math impo",
-    "description":"this is a good video"
+    "video_id":"654",
+    "name":"math impo"
 },
 {
     "id":"6",
     "day":"6",
-    "name":"math impo",
-    "description":"this is a good video"
+    "video_id":"654",
+    "name":"math impo"
 }
 ,{
     "id":"7",
     "day":"7",
-    "name":"math impo",
-    "description":"this is a good video"
+    "video_id":"654",
+    "name":"math impo"
 }
 
 

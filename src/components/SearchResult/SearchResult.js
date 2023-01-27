@@ -1,6 +1,12 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const SearchResult = (props) => {
+    const navigate= useNavigate();
+
+    const navigateToServiceDetail = id =>{
+            navigate(`/searchdetail/${id}`);
+    }
     return (
         <div className="card card-compact w-96 bg-base-100 shadow-xl">
             <div className="card-body">
@@ -11,7 +17,7 @@ const SearchResult = (props) => {
                 <h2 className="card-title">{props.name}</h2>
                 <p>{props.description}</p>
                 <div className="card-actions justify-end">
-                    <button className="btn btn-primary">Watch</button>
+                    <button onClick={()=>navigateToServiceDetail(props.idx)} className="btn btn-primary">Watch</button>
                 </div>
             </div>
         </div>
