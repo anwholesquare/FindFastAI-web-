@@ -10,6 +10,7 @@ const Home = () => {
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <div>
                         <img src={img} className="max-w-sm rounded-lg pt-24" />
+
                     </div>
                     <div>
                         <h1 className="text-5xl font-bold">Discover to unleash </h1>

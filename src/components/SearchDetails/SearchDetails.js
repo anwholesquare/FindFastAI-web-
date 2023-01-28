@@ -12,7 +12,7 @@ const SearchDetails = () => {
 
 
     useEffect(() => {
-        fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=${subtopic}&type=video&key=AIzaSyBvdQNIflKQd3VAFEMvZtr0FRTrFnt3y3w `)
+        fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=${subtopic}&type=video&key=AIzaSyAsPBRUNoay29bUWe1IdBiPE0le1ZOUIrY `)
         .then(res=> res.json())
         .then (data => { setvideoURL("https://www.youtube.com/watch?v=" + data["items"][0]["id"]["videoId"]); setDesc(data["items"][0]["snippet"]["description"]); } )
     });

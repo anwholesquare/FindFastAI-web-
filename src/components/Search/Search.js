@@ -79,7 +79,7 @@ const Search = () => {
                 </div>
                 {   
                     topic.map(subtopic =>
-                        <a type="radio" name="options" key={subtopic} href="#my-modal-2" onClick={changer(subtopic)} className="btn mr-5 tag">{subtopic}</a>
+                        <a type="radio" name="options" key={subtopic} href="#my-modal-2" onClick={()=>navigateToNext(subtopic)} className="btn mr-5 tag">{subtopic}</a>
                     )
                 }
 
